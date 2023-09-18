@@ -1,0 +1,12 @@
+[submodule "buffered-socky"]
+	path = buffered-socky
+	url = git@github.com:LeandreBl/buffered-socky.git
+[submodule "clist"]
+	path = clist
+	url = git@github.com:LeandreBl/clist.git
+[submodule "lvector"]
+	path = lvector
+	url = git@github.com:LeandreBl/lvector.git
+[submodule "dispatchy"]
+	path = dispatchy
+	url = git@github.com:LeandreBl/dispatchy.git
