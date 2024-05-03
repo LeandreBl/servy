@@ -31,6 +31,10 @@ int servy_disconnect_tcp_client(struct servy *servy_ctx, struct servy_tcp_client
 
 int servy_timeout_poll(struct servy *servy_ctx, int32_t timeout_ms)  __nonnull((1));
 
+int servy_tcp_connect(struct servy *servy_ctx, const struct servy_duplex_callbacks *callbacks, const char *address, uint16_t port);
+
+int servy_tcp_connect32(struct servy *servy_ctx, const struct servy_duplex_callbacks *callbacks, uint32_t address, uint16_t port);
+
 int servy_run(struct servy *servy_ctx) __nonnull((1));
 
 #endif /* !SERVY_H_ */

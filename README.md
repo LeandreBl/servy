@@ -218,7 +218,7 @@ int main(int ac, char **av)
     * Note that, even if this example does not show it, you can unregister a port at any moment
     */
     if (ac < 2) {
-        fprintf(stderr, "USAGE: ./%s port1 [port2] [port3] ...", av[0]);
+        fprintf(stderr, "USAGE: %s port1 [port2] [port3] ...\n", av[0]);
         return 1;
     }
 
@@ -274,7 +274,7 @@ int main(int ac, char **av)
 # Compilation
 
 ```sh
-gcc main.c -lservy -lbuffy -lsocky -lbuffered-socky -ldispatchy -avcall
+gcc main.c -lservy -lbuffy -lsocky -lbuffered-socky -ldispatchy -lavcall
 ```
 
 > You can compile the library staticly with `make static`

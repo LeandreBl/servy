@@ -50,8 +50,8 @@ DEPENDENCIES = buffy socky dispatchy buffered-socky avcall
 
 RECURSIVE_HEADERS = $(shell dirname `find . -name "*.h"`)
 
-CFLAGS		+= -Wall -Wextra -fPIC -pedantic
-CPPFLAGS	+= -I ./include $(addprefix -iquote,$(RECURSIVE_HEADERS))
+CFLAGS		+= -Wall -Wextra -fPIC
+CPPFLAGS	+= -I ./include $(addprefix -I,$(RECURSIVE_HEADERS))
 LIBS		+= $(addprefix -l,$(DEPENDENCIES))
 LDFLAGS		= -shared $(LIBS) $(addprefix -L,$(DEPENDENCIES))
 

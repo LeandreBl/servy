@@ -12,6 +12,8 @@ struct servy_tcp_client;
 
 struct servy_duplex_callbacks
 {
+    void (*on_connect_callback)(struct servy *servy_ctx, struct servy_tcp_client *servy_socket, void *userdata, int errno_code);
+    void *on_connect_userdata;
     void (*on_disconnect_callback)(struct servy *servy_ctx, struct servy_tcp_client *servy_socket, void *userdata, int errno_code);
     void *on_disconnect_userdata;
     void (*after_read_callback)(struct servy *servy_ctx, struct servy_tcp_client *servy_socket, void *userdata, int errno_code);
